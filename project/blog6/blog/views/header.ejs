@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Blog</title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <!--<link rel='stylesheet' href='/kindEditor/themes/default/default.css' />-->
+    <script type="text/javascript" src="/kindEditor/kindeditor-min.js"></script>
+    <script type="text/javascript" src="/kindEditor/lang/zh_CN.js"></script>
+    <script type="text/javascript">
+      var editor;
+      KindEditor.ready(function(K){
+         editor = K.create('textarea',{
+            minWidth:540,
+            minHeight:180,
+            resizeType:0,  //不允许拖拽大小
+            allowImageUpload:false,
+            items:[
+              'fontname','fontsize','|','forecolor','hilitecolor','bold','italic','underline','removeformat','|','justifyleft','justifycenter','justifyright','insertorderedlist','insertunorderedlist','|','emoticons','image','link'
+            ]
+         });
+      });
+      
+      // KindEditor.ready(function(K){
+      //   editor = K.create('#kindeditor');
+      // });
+    </script>
+  </head>
+  <body>
+
+  <header>
+  	<h1><%= title %></h1>
+  </header>
+  <nav>
+  	<span><a title="主页" href="/">主页</a></span>
+    <span><a title="存档" href="/archive">存档</a></span>
+    <span><a title="标签" href="/tags">标签</a></span>
+    <span><a title="友情链接" href="/links">Links</a></span>
+  	<% if (user) { %>
+    <span><a title="上传" href="/upload">上传</a></span>
+  	<span><a title="发表" href="/post">发表</a></span>
+  	<span><a title="登出" href="/logout">登出</a></span>
+  	<% } else { %>
+  	<span><a title="登录" href="/login">登录</a></span>
+  	<span><a title="注册" href="/reg">注册</a></span>
+  	<% } %>
+    <span><form action="/search" method="GET"><input type="text" name="keyword" placeholder="Search" class="search" /></form></span>
+  </nav>
+
+  <article>
+  <% if (success) { %>
+        <div><%= success %></div>
+  <% } %>
+  <% if (error) { %>
+        <div><%= error %></div>
+  <% } %>

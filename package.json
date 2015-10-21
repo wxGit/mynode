@@ -1,0 +1,32 @@
+{
+  "name": "nodecode",
+  "version": "1.0.0",
+  "description": "cradle\r ======",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wxGit/mynode.git"
+  },
+  "author": "xiang.wu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wxGit/mynode/issues"
+  },
+  "homepage": "https://github.com/wxGit/mynode#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-copy": "^0.8.2",
+    "grunt-contrib-cssmin": "^0.14.0",
+    "grunt-contrib-uglify": "^0.9.2",
+    "grunt-htmlhint": "^0.9.12",
+    "grunt-markdown": "^0.7.0",
+    "grunt-zip": "^0.17.1"
+  },
+  "dependencies": {
+    "grunt": "^0.4.5"
+  }
+}

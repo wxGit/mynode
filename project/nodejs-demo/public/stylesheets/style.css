@@ -1,0 +1,19 @@
+body {
+  padding: 0px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.box{
+	width: 400px;
+	margin: 100px auto;
+}
+.box form legend{
+	color: #09c;
+}
+.box form .txt{
+	margin:6px 0;
+}
